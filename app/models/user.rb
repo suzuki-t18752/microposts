@@ -35,4 +35,5 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_microposts, through: :favorites, source: :micropost
   
+  
 end
