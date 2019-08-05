@@ -1,0 +1,27 @@
+<div class="text-center">
+  <h1>Sign up</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+    <%= form_with(model: @user, local: true) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <div class="form-group">
+        <%= f.label :image, 'Image' %>
+        <%= f.file_field :image, class: 'form-control' %>
+      </div>
+
+      <%= f.submit 'Update', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>

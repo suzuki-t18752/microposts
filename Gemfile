@@ -61,3 +61,6 @@ gem 'bcrypt', '~> 3.1.7'
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+gem 'rmagick'
